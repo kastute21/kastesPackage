@@ -7,7 +7,7 @@ nice_plot <- function(x, y, plot_type = "scatter", title = "Title", xlab = "X Ax
   } else if (plot_type == "line") {
     plot(x, y, type = "l", main = title, xlab = xlab, ylab = ylab, col = wes_palette(name=sample(palettes,1),1), lwd = 2)
   } else if (plot_type == "hist") {
-    hist(x, main = title, xlab = xlab, col = wes_palette(name=sample(palettes,1)))
+    hist(x, main = title, xlab = xlab, col = wes_palette(name=sample(palettes,1))[1])
   } else {
     stop("Error: invalid plot type")
   }
