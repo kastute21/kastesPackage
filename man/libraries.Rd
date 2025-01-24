@@ -12,23 +12,21 @@ kastesPackage(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{ choice from: all, main, fun, and plot. The choice determines which libaries are loaded.
+  \item{x}{ choice from: all, main and plot. The choice determines which libaries are loaded.
 }
 }
 \details{
 These are the possible libraries:
 main <- c("ggplot2", "dplyr", "tidyr","MASS")
-fun <- c("memer", "cowsay", "wesanderson")
 plot <- c("plotly", "ggplot2", "gganimate", "ggstatsplot")
-all <- c(main, fun, plot)
+all <- c(main, plot)
 }
 
 ## the function is currently defined as:
 libraries <- function(x = all) {
   main <- c("ggplot2", "dplyr", "tidyr","MASS")
-  fun <- c("memer", "cowsay", "wesanderson")
   plot <- c("plotly", "ggplot2", "gganimate", "ggstatsplot")
-  all <- c(main, fun, plot)
+  all <- c(main, plot)
   to_install <- all[!all %in% rownames(installed.packages())]
   if (length(to_install) > 0) {
     install.packages(to_install)
