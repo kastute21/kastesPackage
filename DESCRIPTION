@@ -3,11 +3,12 @@ Type: Package
 Title: includes two functions: nice_plot() and libraries()
 Version: 0.1.0
 Authors@R: c(
-    person(
-      "Kaste", "Ivanauskaite"
-    )
-  )
+    person("Kaste", "Ivanauskaite", 
+           email = "kaste.ivanauskaite@student.uva.nl", 
+           role = c("aut", "cre"))
+)
 Description: nice_plot() creates a scatter, histogram or line plot with specified x, y, etc. values and adds a random color
     palette from the package "wesanderson" to it. libraries() installs and loads some basic libraries.
 Encoding: UTF-8
+License: MIT
 LazyData: true
